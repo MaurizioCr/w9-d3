@@ -80,7 +80,7 @@ class SingleBook extends Component {
                 <Card.Text>
                   {book.category}
                 </Card.Text>
-                <Check />
+                <Check id={book.asin} />
               </Card.Body>
             </Card>
           </Col>
