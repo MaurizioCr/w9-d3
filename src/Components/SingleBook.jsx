@@ -61,47 +61,35 @@
 // Nel tuo componente SingleBook
 import React, { Component } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import ToggleButton from 'react-bootstrap/ToggleButton';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Check from './Checked';
 
-function CheckedButton() {
-  const [checked, setChecked] = useState(false);
-  class SingleBook extends Component {
+class SingleBook extends Component {
 
-    render() {
-      const { book } = this.props;
+  render() {
+    const { book } = this.props;
 
 
-      return (
-        <Container>
-          <Row>
-            <Col md={3}>
-              <Card>
-                <Card.Img variant="top" src={book.img} />
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                  <Card.Text>
-                    {book.category}
-                  </Card.Text>
-                  <ButtonGroup>
-                    <ToggleButton
-                      type="checkbox"
-                      variant="primary"
-                      checked={checked}
-                      onChange={(e) => setChecked(e.currentTarget.checked)}
-                    >
-                      Checked
-                    </ToggleButton>
-                  </ButtonGroup>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      );
-    }
+    return (
+      <Container>
+        <Row>
+          <Col md={3}>
+            <Card>
+              <Card.Img variant="top" src={book.img} />
+              <Card.Body>
+                <Card.Title>{book.title}</Card.Title>
+                <Card.Text>
+                  {book.category}
+                </Card.Text>
+                <Check />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    );
   }
-  //problema con checked
-  export default SingleBook;
+}
+
+export default SingleBook;
 
 

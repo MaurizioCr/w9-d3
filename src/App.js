@@ -6,6 +6,7 @@ import FooterUno from './Components/footer';
 import SingleBook from './Components/SingleBook';
 import Library from '../src/books/romance.json'
 import BookList from './Components/Booklist';
+import Checked from './Components/Checked'
 
 function App() {
   return (
