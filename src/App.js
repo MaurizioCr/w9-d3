@@ -6,7 +6,7 @@ import FooterUno from './Components/footer';
 import SingleBook from './Components/SingleBook';
 import Library from '../src/books/romance.json'
 import BookList from './Components/Booklist';
-import Checked from './Components/Checked'
+
 
 function App() {
   return (
@@ -16,10 +16,10 @@ function App() {
         <Alert/>
       </header>
       <main>
-        <Books/>
+        {/* <Books/> */}
+      <BookList books={Library} />
       </main>
       <article>
-      <BookList books={Library} />
 
       <SingleBook book="The Last Wish: Introducing the Witcher" />
 

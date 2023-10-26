@@ -1,29 +1,30 @@
-import { useState } from 'react';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+// CheckedButton.js
+import React, { Component } from 'react';
+import { ToggleButton } from 'react-bootstrap';
 
-function ToggleButtonExample(e) {
-    const [checked, setChecked] = useState(false);
+class ToggleButtonExample extends Component {
+    state = {
+        selected: false,
+    }
+    render() {
 
 
 
-    return (
-        <>
 
-
+        return (
             <ToggleButton
+                key={1}
                 className="mb-2"
-                id={e}
                 type="checkbox"
-                variant="outline-primary"
-                checked={checked}
-                value="1"
-                onChange={(e) => setChecked(e.currentTarget.checked)}
+                variant={'primary'}
+                onChange={() => this.setState({ selected: !this.state.selected })}
+                style={{ border: this.state.selected ? '3px solid red' : 'none' }}
             >
-                Checked
+                Check
             </ToggleButton>
-
-        </>
-    );
+        );
+    }
 }
 
 export default ToggleButtonExample;
+
