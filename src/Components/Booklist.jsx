@@ -41,7 +41,7 @@ class BookList extends Component {
             <Container>
                 <Row>
                     <Col md={12}>
-                        <Form.Group>
+                        <Form.Group className='mb-3'>
                             <Form.Control
                                 type="text"
                                 placeholder="Search by title"
